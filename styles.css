@@ -1,0 +1,158 @@
+.hero-content {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards ease-in-out;
+}
+
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #001f3f; /* Navy Blue */
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+header {
+  background-color: rgba(0, 31, 63, 0.8);
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition for header background and padding */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  transition: padding 0.3s ease; /* Smooth transition for padding */
+}
+
+nav ul li {
+  margin: 0 20px; /* Increase margin to add more space between buttons */
+  transition: margin 0.3s ease; /* Smooth transition for margin */
+}
+
+nav ul li a {
+  position: relative;
+  padding: 10px 20px; /* Increase padding to make the buttons larger */
+  font-size: 20px; /* Increase font size for larger text */
+  transition: color 0.3s ease, background-color 0.3s ease, padding 0.3s ease,
+    font-size 0.3s ease; /* Smooth transition for color, background-color, padding, and font-size */
+}
+
+nav ul li a:hover {
+  color: #cccccc; /* Slightly darker on hover */
+  background-color: rgba(0, 31, 63, 0.8); /* Darker background on hover */
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px; /* Position the underline slightly below the text */
+  left: 0;
+  background-color: #007bff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover:before {
+  visibility: visible;
+  transform: scaleX(1); /* Animate underline on hover */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-image: url("hero-background.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: background-size 0.3s ease, background-position 0.3s ease; /* Smooth transition for background */
+}
+
+.bio {
+  font-size: 24px;
+  line-height: 1.6;
+  max-width: 800px;
+  white-space: pre-wrap;
+}
+
+.bio span {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.bio span.show {
+  opacity: 1;
+}
+
+.bio:hover span {
+  transition: opacity 0.2s ease;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.about,
+.projects,
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+  transition: padding 0.3s ease, text-align 0.3s ease; /* Smooth transition for padding and text alignment */
+}
+
+footer {
+  background-color: rgba(0, 31, 63, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition for background and padding */
+}
+
+.profile-pic {
+  width: 160px;
+  height: 180px;
+  border-radius: 30%;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: 2px solid #ffffff;
+  transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease,
+    transform 0.3s ease; /* Smooth transition for size, border-radius, and transform */
+}
+
+.profile-pic:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+.highlight {
+    color: yellow;
+  }
+  

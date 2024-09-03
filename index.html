@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <img src="images/me.jpg" alt="Your Name" class="profile-pic" />
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+          <p id="bio" class="bio"></p>
+        </div>
+      </section>
+      
+
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>
+        Your bio goes here. Briefly describe yourself, your skills, and your
+        experience.
+      </p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <!-- Project details go here -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <!-- Contact form goes here -->
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const bioText =
+              "I am Kevin Halby, a dedicated computer science student with a strong focus on full stack development. My expertise spans both front-end and back-end technologies, allowing me to create robust and scalable web applications. Proficient in HTML, CSS, JavaScript, PHP, and MySQL, I am passionate about designing and implementing seamless user experiences and efficient server-side functionalities. My goal is to leverage my skills and knowledge to contribute to innovative projects and advance in the field of software development.";
+            const bioElement = document.getElementById("bio");
+          
+            // Typing effect
+            let index = 0;
+            function typeEffect() {
+              if (index < bioText.length) {
+                bioElement.textContent += bioText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 50); // Adjust typing speed here (lower is faster)
+              }
+            }
+          
+            typeEffect();
+          });
+          
+    </script>
+  </body>
+</html>
